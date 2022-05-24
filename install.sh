@@ -18,8 +18,9 @@ curl -sfL git.io/antibody | sudo sh -s - -b /usr/local/bin
 
 antibody bundle < .zsh_plugins.txt > .zsh_plugins.sh
 
-# activate zsh config
+# activate stow packages
 stow zsh
+stow bash
 
 # install additional packages
 dnf install bat tldr
