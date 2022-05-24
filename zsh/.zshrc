@@ -28,5 +28,5 @@ source ~/.zsh_plugins.sh
 source /usr/share/fzf/shell/key-bindings.zsh
 
 # aliases
-alias ls="ls --color=auto"
+alias ls="ls -a --color=auto"
 alias ll="ls -la"
