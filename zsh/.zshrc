@@ -32,3 +32,7 @@ source /usr/share/fzf/shell/key-bindings.zsh
 # aliases
 alias ls="ls -a --color=auto"
 alias ll="ls -la"
+
+# arrowkeys
+bindkey '^[[1;5D' backward-word
+bindkey '^[[1;5C' forward-word
