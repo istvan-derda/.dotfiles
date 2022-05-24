@@ -1,35 +1,32 @@
-# install util-linux-user
-sudo dnf install util-linux-user # provides chsh
 
-# install stow
+echo "installing util-linux-user for chsh command"
+sudo dnf install util-linux-user -y
+
+echo "installing stow"
 sudo dnf install stow -y
 
-# install zsh
-sudo dnf install zsh -y
-
-# add zsh to valid shells
-command -v zsh | sudo tee -a /etc/shells
-
-# make zsh default shell 
-sudo chsh -s $(which zsh) $USER
-
-# Install antibody and generate zsh_plugins.sh
-curl -sfL git.io/antibody | sudo sh -s - -b /usr/local/bin
-
-antibody bundle < .zsh_plugins.txt > .zsh_plugins.sh
-
-# activate stow packages
+echo "activating zsh stow-package"
 stow zsh
+echo "activationg bash stow-package"
 stow bash
 
-# install additional packages
-dnf install bat tldr
+echo "installing zsh"
+sudo dnf install zsh -y
 
-# install pyenv
-sudo dnf install gcc zlib-devel bzip2 bzip2-devel readline-devel sqlite \
-sqlite-devel openssl-devel xz xz-devel libffi-devel patch # pyenv dependencies
+echo "adding zsh to valid shells"
+command -v zsh | sudo tee -a /etc/shells
 
-curl https://pyenv.run | zsh # pyenv installer
+echo "making zsh default shell" 
+sudo chsh -s $(which zsh) $USER
 
-# install poetry
-curl -sSL https://install.python-poetry.org | python3 -
+echo "installing antibody, a zsh plugin manager"
+curl -sfL git.io/antibody | sudo sh -s - -b /usr/local/bin
+
+echo "bundling zsh_plugins.sh from zsh_plugins.txt"
+antibody bundle < $HOME/.zsh_plugins.txt > $HOME/.zsh_plugins.sh
+
+echo "installing additional packages"
+sudo dnf install -y \
+	    bat \
+	    tldr \
+	    fzf \
