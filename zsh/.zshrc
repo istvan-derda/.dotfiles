@@ -36,3 +36,9 @@ alias ll="ls -la"
 # arrowkeys
 bindkey '^[[1;5D' backward-word
 bindkey '^[[1;5C' forward-word
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
