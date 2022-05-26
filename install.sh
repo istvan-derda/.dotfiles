@@ -7,8 +7,8 @@ sudo dnf install stow -y
 
 echo "activating zsh stow-package"
 stow zsh
-echo "activationg bash stow-package"
-stow bash
+echo "activating git stow-package"
+stow git
 
 echo "installing zsh"
 sudo dnf install zsh -y
