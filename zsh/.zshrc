@@ -35,5 +35,5 @@ alias ll="ls -la"
 
 # arrowkeys
 bindkey '^[[1;5D' backward-word
-bindkey '^[[1;5C' forward-wor
+bindkey '^[[1;5C' forward-word
 
