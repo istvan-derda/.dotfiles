@@ -37,3 +37,6 @@ alias ll="ls -la"
 bindkey '^[[1;5D' backward-word # ctrl-left
 bindkey '^[[1;5C' forward-word # ctrl-right
 bindkey '^[[3~' delete-char # del key
+
+# add ~/.local/bin to path
+export PATH="/home/istvan/.local/bin:$PATH"
