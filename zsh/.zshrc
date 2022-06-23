@@ -33,6 +33,8 @@ source /usr/share/fzf/shell/key-bindings.zsh
 alias ls="ls -a --color=auto"
 alias ll="ls -la"
 
+alias mvn15="JAVA_HOME=~/.jdks/corretto-15.0.2/ mvn"
+
 # make keys work as expected
 bindkey '^[[1;5D' backward-word # ctrl-left
 bindkey '^[[1;5C' forward-word # ctrl-right
