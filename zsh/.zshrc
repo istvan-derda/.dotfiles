@@ -39,6 +39,8 @@ alias mvn15="JAVA_HOME=~/.jdks/corretto-15.0.2/ mvn"
 bindkey '^[[1;5D' backward-word # ctrl-left
 bindkey '^[[1;5C' forward-word # ctrl-right
 bindkey '^[[3~' delete-char # del key
+bindkey '^H' backward-kill-word
+bindkey '^[[3;5~' kill-word
 
 # add ~/.local/bin to path
 export PATH="/home/istvan/.local/bin:$PATH"
