@@ -30,7 +30,8 @@ bindkey '^ ' autosuggest-accept
 source /usr/share/fzf/shell/key-bindings.zsh
 
 # aliases
-alias ls="ls -a --color=auto"
+alias ls="ls --color=auto"
+alias la="ls -a"
 alias ll="ls -la"
 
 alias mvn15="JAVA_HOME=~/.jdks/corretto-15.0.2/ mvn"
