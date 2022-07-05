@@ -17,6 +17,12 @@ call plug#begin()
 
 Plug 'morhetz/gruvbox' " gruvbox theme
 
+if has('nvim') || has('patch-8.0.902')
+  Plug 'mhinz/vim-signify'
+else
+  Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
+endif
+
 call plug#end()
 
 " gruvbox theme
