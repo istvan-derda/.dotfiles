@@ -1,3 +1,4 @@
+#! /bin/sh
 
 echo "installing util-linux-user for chsh command"
 sudo dnf install util-linux-user -y
