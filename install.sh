@@ -26,6 +26,9 @@ curl -sfL git.io/antibody | sudo sh -s - -b /usr/local/bin
 echo "bundling zsh_plugins.sh from zsh_plugins.txt"
 antibody bundle < $HOME/.zsh_plugins.txt > $HOME/.zsh_plugins.sh
 
+echo "installing pyenv"
+curl https://pyenv.run | bash
+
 echo "installing additional packages"
 sudo dnf install -y \
 	    bat \
