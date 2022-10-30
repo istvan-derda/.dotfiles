@@ -3,3 +3,5 @@
 	name = István Derda
 [init]
 	defaultBranch = main
+[core]
+	autocrlf = input
