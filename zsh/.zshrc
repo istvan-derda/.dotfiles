@@ -44,7 +44,7 @@ bindkey '^H' backward-kill-word
 bindkey '^[[3;5~' kill-word
 
 # add ~/.local/bin to path
-export PATH="/home/istvan/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 # make vim the standard editor
 export VISUAL=vim
