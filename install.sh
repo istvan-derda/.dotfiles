@@ -34,3 +34,4 @@ sudo dnf install -y \
 	    bat \
 	    tldr \
 	    fzf \
+	    git-delta \
