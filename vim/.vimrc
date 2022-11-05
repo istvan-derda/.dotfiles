@@ -1,3 +1,4 @@
+source $VIMRUNTIME/defaults.vim
 set mouse=a
 set nocompatible
 filetype on
@@ -18,6 +19,8 @@ call plug#begin()
 Plug 'morhetz/gruvbox' " gruvbox theme
 
 Plug 'airblade/vim-gitgutter' " show changed lines
+
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']} " markdown preview
 
 call plug#end()
 
